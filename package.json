@@ -18,6 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "accordion-js": "^3.3.4",
+    "axios": "^1.7.7",
     "install": "^0.13.0",
     "izitoast": "^1.4.0",
     "npm": "^10.8.3",
