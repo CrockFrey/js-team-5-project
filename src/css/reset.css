@@ -31,26 +31,3 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-body{
-  color: #fafafa;
-  background-color: #1c1d20;
-  font-family: 'Inter Tight',sans-serif;
-}
-
-:root {
-  --background: #1c1d20;
-  --cards: #242527;
-  --arrow: #3b3b3b;
-  --button-text: #ed3b44;
-  --main-text: #fafafa;
-  --font-family: 'Inter Tight', sans-serif;
-}
-
