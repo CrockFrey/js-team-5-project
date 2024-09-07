@@ -1,0 +1,55 @@
+.covers-section {
+  margin: 0 auto;
+  max-width: 100%;
+  min-height: 508px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url(../img/covers/covers-backgrou-mob.png);
+}
+
+.visually-hidden {
+  position: absolute;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.covers-content {
+  position: relative;
+}
+
+.covers-menu {
+  position: absolute;
+  right: -800px;
+  left: 0;
+  overflow: hidden;
+}
+.covers-item {
+  height: 100vh;
+  display: flex;
+  transform: rotate(16deg);
+}
+.covers-img {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% / 9);
+  white-space: nowrap;
+  animation-name: marqueeLine;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes marqueeLine {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(-300%);
+  }
+}
