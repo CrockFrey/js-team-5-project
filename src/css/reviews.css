@@ -1,3 +1,4 @@
+@import url('swiper/swiper-bundle.css');
 
 .reviews-title {
     text-transform: uppercase;
@@ -35,18 +36,62 @@
 
 .review-text {
     font-weight: 500;
+    margin: 0;
     font-size: 16px;
     opacity: 0.6;
-    width: 295px;
+    min-width: 245px;
+    max-width: 295px;
     height: 158px;
 }
 
-.swiper {
-    width: 100%;
-    height: 302px;
+.swiper-wrapper-reviews {
+   position: static;
 }
 
-.swiper-slide {
-    justify-content: center;
+.swiper-buttons-reviews {
+    height: 52px;
+    display: flex;
+    gap: 12px;
     align-items: center;
+    justify-content: center;
+}
+
+.custom-prev-review,
+.custom-next-review {
+    position: static;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    background-color: inherit;
+    border-radius: 60px;
+    padding: 14px;
+    margin-top: 0;
+    width: 52px;
+    height: 52px;
+}
+
+.custom-prev-review svg,
+.custom-next-review svg {
+    stroke: #fafafa;
+    }
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.swiper-buttons-reviews .swiper-button-prev::after,
+.swiper-buttons-reviews .swiper-button-next::after {
+    color: #fafafa;
+}
+
+.is-hidden {
+    display: none;
+}
+
+.not-found-text {
+    align-self: center;
+    margin-right: auto;
+    margin-left: auto;
+    color: rgba(250, 250, 250, 0.6);
+    font-size: 20px;
+    font-weight: 500;
 }

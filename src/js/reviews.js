@@ -3,8 +3,8 @@ import iziToast from 'izitoast';
 import Swiper from 'swiper';
 
 const reviewList = document.querySelector('.reviews-list');
+const notFoundText = document.querySelector('.not-found-text');
 
-axiosReviews();
 async function axiosReviews() {
     try {
       const response = await axios.get('https://portfolio-js.b.goit.study/api/reviews');
@@ -14,13 +14,18 @@ async function axiosReviews() {
         
       reviewList.innerHTML = getReviews;
 
-    } catch (err) {
+    } catch(error) {
+      notFoundText.classList.remove('is-hidden');
         iziToast.error({
-            message: 'Sorry, reviews are not found',
-            position: 'center'
+            message: 'Sorry, an error occured. Please try again!',
+            position: 'center',
+            messageColor: 'white',
         })
+      
     }
 }
+
+axiosReviews();
 
 function renderReviews(review) {
         return `<li class="review-item swiper-slide">
@@ -31,26 +36,21 @@ function renderReviews(review) {
     }
 
 
-const swiper = new Swiper('.swiper', {
-    loop: false,
-    lazy: true,
-    breakpointsBase: 'container',
-    breakpoints: {
+const swiper = new Swiper('.swiper-reviews', {
+  breakpointsBase: 'container',  
+  breakpoints: {
     375: {
       slidesPerView: 1,
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 316
+      spaceBetween: 16
     },
     1440: {
       slidesPerView: 4,
       spaceBetween: 16
     }
   },
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-    },
+    slideToClickedSlide: true,
 })
 
