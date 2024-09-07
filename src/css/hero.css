@@ -1,0 +1,101 @@
+.hero-section {
+  position: relative;
+  background-image: url(/img/hero/hero-mob.png);
+  background-size: cover;
+  height: 812px;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.hero-title {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+
+.hero-socials-list {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-bottom: 32px;
+  margin-top: 212px;
+}
+
+.hero-socials-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  width: 37px;
+  height: 37px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.hero-socials-mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  color: #fafafa;
+  width: 178px;
+  height: 37px;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    background-image: url(/img/hero/hero-tab.png);
+    height: 1024px;
+  }
+
+  .hero-title {
+    font-size: 90px;
+  }
+
+  .hero-socials-list {
+    margin-top: 187px;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .hero-socials-item {
+    width: 55px;
+    height: 55px;
+    font-size: 16px;
+  }
+  .hero-socials-mail {
+    width: 223px;
+    height: 55px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero-section {
+    background-image: url(/img/hero/hero-desktop.png);
+    height: 900px;
+  }
+  .hero-title {
+    margin: 0 146px;
+  }
+
+  .hero-socials-list {
+    margin-top: 243px;
+  }
+}

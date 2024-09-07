@@ -1,39 +1,39 @@
 .container {
-    min-width: 320px;
-    max-width: 375px;
-    margin: 0 auto;
-    padding-left: 16px;
-    padding-right: 16px;
+  min-width: 320px;
+  max-width: 375px;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 @media screen and (min-width: 768px) {
-    .container {
-        max-width: 768px;
-        padding-left: 32px;
-        padding-right: 32px;
-    }
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    .container {
-        max-width: 1440px;
-        padding-left: 32px;
-        padding-right: 32px;
-    }
-}    
+  .container {
+    max-width: 1440px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
 
 section {
-    padding-bottom: 64px;
+  padding-bottom: 64px;
 }
 
 @media screen and (min-width: 768px) {
-    section {
-        padding-bottom: 96px;
-    }
+  section {
+    padding-bottom: 96px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-    section {
-        padding-bottom: 164px;
-    }
+  section {
+    padding-bottom: 164px;
+  }
 }

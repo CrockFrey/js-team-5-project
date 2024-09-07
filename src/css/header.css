@@ -1,0 +1,151 @@
+.header-section {
+  background-color: transparent;
+  position: absolute;
+  z-index: 99999;
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-logo-block {
+  display: flex;
+}
+
+.header-logo {
+  border-radius: 19px;
+  height: 80px;
+}
+
+.logo-name {
+  color: #fafafa;
+  margin-left: 8px;
+}
+
+.header-order-button {
+  display: none;
+}
+
+.header-burger-button {
+  background-color: transparent;
+  border: none;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+}
+
+.header-burger-icon {
+  height: 28px;
+  width: 28px;
+}
+
+.header-menu {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  z-index: 999999;
+  background-image: url(/img/hero/hero-mob-menu.png);
+  background-size: cover;
+  width: 100vh;
+  height: 100vh;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.mobile-menu-close-btn {
+  background-color: transparent;
+  border: none;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin-top: 32px;
+}
+
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+  margin-top: 242px;
+}
+
+.mobile-menu-item {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.menu-order-button {
+  margin: 0 auto;
+  margin-top: 289px;
+  margin-bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2b4441;
+  border-radius: 60px;
+  padding: 14px 31px;
+  width: 164px;
+  height: 45px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+@media screen and (min-width: 768px) {
+  .header-burger-button {
+    display: none;
+  }
+
+  .header-menu {
+    display: block;
+    height: 39px;
+  }
+
+  .header-menu-button {
+    background-color: transparent;
+    border: none;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    color: #fafafa;
+    padding: 10px;
+    width: 60px;
+    height: 39px;
+  }
+
+  .header-menu-list {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-top: 8px;
+  }
+
+  .header-order-button {
+    display: flex;
+    background-color: #2b4441;
+    border: none;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 163px;
+    height: 55px;
+    color: #fafafa;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
