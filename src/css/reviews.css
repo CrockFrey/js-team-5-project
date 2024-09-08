@@ -1,4 +1,3 @@
-@import url('swiper/swiper-bundle.css');
 
 .reviews-title {
     text-transform: uppercase;
@@ -68,14 +67,12 @@
     height: 52px;
 }
 
-.custom-prev-review svg,
-.custom-next-review svg {
-    stroke: #fafafa;
-    }
+
 
 .arrow-icon {
     width: 24px;
     height: 24px;
+    color: blue;
 }
 
 .swiper-buttons-reviews .swiper-button-prev::after,
