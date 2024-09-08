@@ -53,15 +53,7 @@
     </symbol>
 
 
-    <symbol id="icon-Icon-1" viewBox="0 0 32 32">
-       <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M24 20l-8-8-8 8"></path>
-    </symbol>
-    <symbol id="icon-Icon" viewBox="0 0 32 32">
-       <path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="3.2" d="M24 12l-8 8-8-8"></path>
-    </symbol>
-
-
-        <symbol id="icon-J" viewBox="0 0 32 32">
+       <symbol id="icon-J" viewBox="0 0 32 32">
        <path fill="#fafafa" style="fill: var(--color1, #fafafa)" d="M7.829 28.118c-1.393 0-2.643-0.247-3.75-0.74-1.107-0.504-1.985-1.239-2.632-2.204s-0.97-2.138-0.97-3.52v-0.477h3.668v0.477c0 0.669 0.154 1.256 0.461 1.76 0.318 0.504 0.751 0.894 1.299 1.168 0.559 0.263 1.201 0.395 1.924 0.395 0.778 0 1.442-0.165 1.99-0.493s0.965-0.811 1.25-1.447c0.285-0.647 0.428-1.436 0.428-2.368v-17.385h3.668v17.385c0 1.568-0.302 2.911-0.905 4.030-0.592 1.107-1.436 1.957-2.533 2.549-1.097 0.581-2.396 0.872-3.898 0.872zM23.241 17.066l0.23-5.049-4.243 2.747-1.316-2.27 4.506-2.303-4.506-2.303 1.316-2.303 4.243 2.747-0.23-5.049h2.599l-0.23 5.049 4.243-2.747 1.316 2.303-4.507 2.303 4.507 2.303-1.316 2.27-4.243-2.747 0.23 5.049h-2.599z"></path>
     </symbol>
     <symbol id="icon-jefferson" viewBox="0 0 32 32">
