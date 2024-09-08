@@ -22,39 +22,39 @@
 
 .covers-menu {
   position: absolute;
-  right: -800px;
-  left: 0;
+  right: -2000px;
+  left: -320px;
   overflow: hidden;
 }
 .covers-item {
-  height: 100vh;
-
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 30px;
   transform: rotate(16deg);
 }
 .covers-img {
-  margin-right: 10px;
   flex-shrink: 0;
-  margin-right: 10px;
-  will-change: transform;
   display: flex;
   align-items: center;
-  width: calc(100% / 9);
+  justify-content: center;
+  width: calc(100% / 8);
   white-space: nowrap;
+}
+
+.animation {
   animation-name: marqueeLine;
-  animation-duration: 5s;
+  animation-duration: 6s;
   animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 @keyframes marqueeLine {
   from {
-    transform: translateX(-20%);
+    transform: translateX(-50%);
   }
 
   to {
-    transform: translateX(-180%);
+    transform: translateX(-300%);
   }
 }
 
