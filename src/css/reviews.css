@@ -76,20 +76,26 @@
     height: 52px;
 }
 
-/* .custom-prev-review svg,
-.custom-next-review svg {
-    stroke: #fafafa;
-    } */
 
 .arrow-icon {
     width: 24px;
     height: 24px;
 }
 
-.swiper-buttons-reviews .swiper-button-prev::after,
+.arrow-right {
+    stroke: #fafafa;
+    fill: none;
+}
+
+.arrow-left {
+    /* stroke: #3B3B3B; */
+    fill: none;
+}
+
+/* .swiper-buttons-reviews .swiper-button-prev::after,
 .swiper-buttons-reviews .swiper-button-next::after {
     color: #fafafa;
-}
+} */
 
 .is-hidden {
     display: none;

@@ -5,11 +5,14 @@ import Swiper from 'swiper';
 
 const reviewList = document.querySelector('.reviews-list');
 const notFoundText = document.querySelector('.not-found-text');
+const arrow = document.querySelector('.arrow-icon');
+console.log(arrow);
 
 axiosReviews();
 async function axiosReviews() {
     try {
       const response = await axios.get('https://portfolio-js.b.goit.study/api/reviews');
+      
         const getReviews = response.data
             .map(review => renderReviews(review))
             .join('');
