@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 @import url('izitoast/dist/css/iziToast.min.css');
+=======
+>>>>>>> main
 
 .reviews-title {
     text-transform: uppercase;
@@ -76,14 +79,19 @@
     height: 52px;
 }
 
+<<<<<<< HEAD
 /* .custom-prev-review svg,
 .custom-next-review svg {
     stroke: #fafafa;
     } */
+=======
+
+>>>>>>> main
 
 .arrow-icon {
     width: 24px;
     height: 24px;
+    color: blue;
 }
 
 .swiper-buttons-reviews .swiper-button-prev::after,
