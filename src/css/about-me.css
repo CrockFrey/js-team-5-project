@@ -165,6 +165,8 @@
 .about-arrow-right {
   width: 28px;
   height: 28px;
+  stroke: #3b3b3b;
+  fill: none;;
 }
 .about-arrow-right:hover {
   stroke: #fafafa;
