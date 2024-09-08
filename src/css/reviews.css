@@ -51,8 +51,8 @@
 
 .swiper-wrapper-reviews {
    position: static;
-   /* width: 100%;
-   height: 100%; */
+   width: 100%;
+   height: 100%;
 }
 
 .swiper-buttons-reviews {
@@ -79,16 +79,14 @@
 .arrow-icon {
     width: 24px;
     height: 24px;
+}
+
+.arrow-next-reviews {
     stroke: #fafafa;
     fill: none;
 }
 
-.arrow-right {
-    stroke: #fafafa;
-    fill: none;
-}
-
-.arrow-left {
+.arrow-prev-reviews {
     stroke: #3B3B3B;
     fill: none;
 }
