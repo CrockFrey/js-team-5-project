@@ -2,6 +2,7 @@ import axios from 'axios';
 import iziToast from 'izitoast';
 import Swiper from 'swiper';
 
+
 const reviewList = document.querySelector('.reviews-list');
 const notFoundText = document.querySelector('.not-found-text');
 
