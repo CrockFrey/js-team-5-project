@@ -88,14 +88,9 @@
 }
 
 .arrow-left {
-    /* stroke: #3B3B3B; */
+    stroke: #3B3B3B;
     fill: none;
 }
-
-/* .swiper-buttons-reviews .swiper-button-prev::after,
-.swiper-buttons-reviews .swiper-button-next::after {
-    color: #fafafa;
-} */
 
 .is-hidden {
     display: none;
