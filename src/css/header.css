@@ -15,11 +15,9 @@
 
 .header-logo {
   border-radius: 19px;
-  height: 80px;
 }
 
-.logo-name {
-  color: #fafafa;
+.header-logo-name {
   margin-left: 8px;
 }
 
@@ -49,7 +47,10 @@
   flex-direction: column;
   position: absolute;
   z-index: 999999;
-  background-image: url(/img/hero/hero-mob-menu.png);
+  background-image: image-set(
+    url(/img/hero/hero-mob-menu.png) 1x,
+    url(/img/hero/hero-mob-menu@2x.png) 2x
+  );
   background-size: cover;
   width: 100vh;
   height: 100vh;
@@ -83,13 +84,11 @@
 }
 
 .menu-order-button {
-  margin: 0 auto;
-  margin-top: 289px;
-  margin-bottom: 64px;
+  margin: 289px auto 64px auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #2b4441;
+  background-color: #16a085;
   border-radius: 60px;
   padding: 14px 31px;
   width: 164px;
@@ -107,7 +106,9 @@
   }
 
   .header-menu {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 39px;
   }
 
@@ -133,7 +134,7 @@
 
   .header-order-button {
     display: flex;
-    background-color: #2b4441;
+    background-color: #16a085;
     border: none;
     border-radius: 60px;
     display: flex;

@@ -1,6 +1,9 @@
 .hero-section {
   position: relative;
-  background-image: url(/img/hero/hero-mob.png);
+  background-image: image-set(
+    url(/img/hero/hero-mob.png) 1x,
+    url(/img/hero/hero-mob@2x.png) 2x
+  );
   background-size: cover;
   height: 812px;
   display: flex;
@@ -60,7 +63,10 @@
 
 @media screen and (min-width: 768px) {
   .hero-section {
-    background-image: url(/img/hero/hero-tab.png);
+    background-image: image-set(
+      url(/img/hero/hero-tab.png) 1x,
+      url(/img/hero/hero-tab@2x.png) 2x
+    );
     height: 1024px;
   }
 
@@ -88,7 +94,10 @@
 
 @media screen and (min-width: 1440px) {
   .hero-section {
-    background-image: url(/img/hero/hero-desktop.png);
+    background-image: image-set(
+      url(/img/hero/hero-desktop.png) 1x,
+      url(/img/hero/hero-desktop@2x.png) 2x
+    );
     height: 900px;
   }
   .hero-title {

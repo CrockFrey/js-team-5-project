@@ -1,0 +1,253 @@
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.about-me-content-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+.about-me-img {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+}
+.about-me-img-person {
+  max-width: 100%;
+  min-height: 500px;
+  border-radius: 24px;
+  background-image: image-set(
+    url('../img/about/about-mob.jpg') 1x,
+    url('../img/about/about-mob@2x.jpg') 2x
+  );
+}
+.about-me-img-person-picture {
+  border-radius: 24px;
+}
+.about-me-img-text {
+  border-radius: 24px;
+  min-height: 500px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  background: var(--cards);
+  display: flex;
+  justify-content: center;
+  padding: 32px 32px 0px 32px;
+}
+.about-me-img-text-discr {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 117%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #fafafa;
+}
+.about-me-img-span-functional {
+  color: var(--button-text);
+}
+.about-me-img-span-websites {
+  color: rgba(250, 250, 250, 0.4);
+}
+
+/*                                                                  Akardion                                               */
+.about-accordion {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+
+.about-accordion-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+}
+.about-accordion-dscr {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+.about-accordion-item {
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+.about-accordion-item-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+.about-accordion-item-list1 {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.btn-icon {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 50%;
+  padding: 9px;
+  transition: transform 0.5 ease;
+}
+.is-active .btn-icon {
+  transform: rotate(180deg);
+}
+.svg-about-icon {
+  width: 18px;
+  height: 18px;
+  stroke: #fafafa;
+  fill: #fafafa;
+}
+.about-accordion-title:hover {
+  text-shadow: 0 0 0px #fafafa;
+  transition: text-shadow 0.5s ease;
+}
+.btn-icon:hover {
+  border: 1px solid #fafafa;
+  transition: border 0.5s ease;
+}
+.ac .ac-panel {
+  overflow: hidden;
+  transition-property: height, visibility;
+  transition-timing-function: ease;
+  visibility: hidden;
+}
+
+.ac.is-active .ac-panel {
+  visibility: visible;
+}
+/*                                                       Swiper                                                               */
+.about-skills-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about-skills-list {
+  display: flex;
+}
+.about-skills-list .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  aspect-ratio: 1/1;
+  cursor: pointer;
+  border-radius: 100%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  background-color: transparent;
+}
+.about-skills-btn {
+  margin-left: 55px;
+  display: flex;
+  padding: 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.about-arrow-right {
+  width: 28px;
+  height: 28px;
+}
+.about-arrow-right:hover {
+  stroke: #fafafa;
+}
+@media screen and (min-width: 768px) {
+  .about-me-img-person {
+    background-image: image-set(
+      url('../img/about/about-tab.jpg') 1x,
+      url('../img/about/about-tab@2x.jpg') 2x
+    );
+  }
+  .about-me-content-list {
+    row-gap: 64px;
+  }
+  .about-me-img-text {
+    min-height: 700px;
+    padding: 64px 64px 0px 64px;
+  }
+  .about-me-img-text-discr {
+    font-size: 38px;
+    line-height: 1.05263;
+  }
+
+  /* Tablet Akardion */
+  .about-accordion {
+    row-gap: 32px;
+  }
+  .about-accordion-title {
+    margin-bottom: 8px;
+  }
+  .btn-icon {
+    padding: 10px;
+  }
+
+  .svg-about-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .about-accordion-item-list {
+    row-gap: 16px;
+  }
+  /* Swiper */
+  .about-skills-list .about-skills-item {
+    height: 200px;
+    font-size: 20px;
+  }
+
+  .about-skills-btn {
+    margin-left: 64px;
+  }
+  .about-arrow-right {
+    width: 40px;
+    height: 40px;
+  }
+}
+/* Декстоп */
+@media screen and (min-width: 1440px) {
+  .about-me-img {
+    flex-direction: row;
+    gap: 16px;
+  }
+  .about-me-img-text-discr {
+    min-width: 50%;
+    line-height: 1.05263;
+  }
+  .about-me-img-person {
+    background-image: image-set(
+      url('../img/about/about-desktop.jpg') 1x,
+      url('../img/about/about-desktop@2x.jpg') 2x
+    );
+    min-width: 680px;
+  }
+  .about-accordion-dscr {
+    gap: 32px;
+    margin-left: 50%;
+    padding-right: 68px;
+  }
+  /* ---------- Skills---------- */
+  .about-me-content-list {
+    row-gap: 96px;
+  }
+  .about-skills-btn {
+    margin-left: 72px;
+  }
+}
