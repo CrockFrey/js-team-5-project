@@ -16,10 +16,14 @@
 
 .review-item {
     border: 1px solid rgba(250, 250, 250, 0.2);
-        border-radius: 20px;
-        padding: 32px 24px;
-        max-width: 343px;
-        height: 302px;
+    border-radius: 20px;
+    padding: 32px 24px;
+    max-width: 343px;
+    min-height: 302px;
+}
+
+.review-item:not(:last-child) {
+    margin-right: 16px;
 }
 
 .review-img {
@@ -30,21 +34,25 @@
 .review-name {
     font-weight: 600;
     font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
     margin-bottom: 8px;
 }
 
 .review-text {
     font-weight: 500;
     margin: 0;
-    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
     opacity: 0.6;
-    min-width: 245px;
-    max-width: 295px;
+    width: 295px;
     height: 158px;
 }
 
 .swiper-wrapper-reviews {
    position: static;
+   width: 100%;
+   height: 100%;
 }
 
 .swiper-buttons-reviews {
@@ -68,16 +76,19 @@
 }
 
 
-
 .arrow-icon {
     width: 24px;
     height: 24px;
-    color: blue;
 }
 
-.swiper-buttons-reviews .swiper-button-prev::after,
-.swiper-buttons-reviews .swiper-button-next::after {
-    color: #fafafa;
+.arrow-next-reviews {
+    stroke: #fafafa;
+    fill: none;
+}
+
+.arrow-prev-reviews {
+    stroke: #3B3B3B;
+    fill: none;
 }
 
 .is-hidden {
