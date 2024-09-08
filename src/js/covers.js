@@ -1,5 +1,5 @@
-const coversSection = document.querySelector('.coversSection');
-const marqueeLine = document / querySelectorAll('.covers-img');
+const coversSection = document.querySelector('.covers-section');
+const marqueeLine = document.querySelectorAll('.covers-img');
 
 const options = {
   root: null,

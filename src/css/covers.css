@@ -28,28 +28,63 @@
 }
 .covers-item {
   height: 100vh;
+
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   transform: rotate(16deg);
 }
 .covers-img {
+  margin-right: 10px;
   flex-shrink: 0;
-
+  margin-right: 10px;
+  will-change: transform;
   display: flex;
   align-items: center;
-  justify-content: center;
   width: calc(100% / 9);
   white-space: nowrap;
   animation-name: marqueeLine;
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
 }
+
 @keyframes marqueeLine {
   from {
-    transform: translateX(-50%);
+    transform: translateX(-20%);
   }
 
   to {
-    transform: translateX(-300%);
+    transform: translateX(-180%);
+  }
+}
+
+@media (min-resolution: 192dpi) {
+  .covers-section {
+    background-image: url('../img/covers/covers-backgrou-mob.png');
+  }
+}
+
+/* ---------- TABLET ---------- */
+
+@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+  .covers-section {
+    min-height: 960px;
+    background-image: url('../img/covers/covers-backgrou-tab.png');
+  }
+}
+
+/* ---------- DESKTOP ---------- */
+
+@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+  .covers-section {
+    background-image: url('../img/covers/covers-backgrou-desktop.png');
+  }
+
+  .covers-item {
+    margin-bottom: 40px;
+  }
+
+  .covers-img {
+    width: calc(100% / 9);
   }
 }
