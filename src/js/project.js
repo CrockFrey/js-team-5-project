@@ -1,31 +1,70 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Keyboard } from 'swiper/modules';
 
-const section = document.querySelector('.projects-section');
-// Отримуємо всі картки
-const slides = document.querySelectorAll('.projects-cards-item');
-
-// Ініціалізуємо Swiper
-const swiper = new Swiper('.swiper-container', {
-  on: {
-    slideChange: function () {
-      // При зміні слайду, приховуємо всі слайди
-      slides.forEach(slide => {
-        slide.classList.add('hidden');
-      });
-
-      // Відображаємо тільки активний слайд
-      const activeSlide = slides[swiper.activeIndex];
-      activeSlide.classList.remove('hidden');
-      activeSlide.style.display = 'flex'; // Застосовуємо flex для активного слайда
+const projectsSwiper = new Swiper('.projects-list', {
+  modules: [Navigation, Keyboard],
+  slidesPerView: 1,
+  spaceBetween: 16,
+  loop: false,
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+  navigation: {
+    nextEl: '.projects-button-next',
+    prevEl: '.projects-button-prev',
+    disabledClass: 'swiper-button-disabled',
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+    },
+    1440: {
+      slidesPerView: 1,
+      spaceBetween: 16,
     },
   },
 });
 
-// При ініціалізації відображаємо лише перший слайд
-slides.forEach((slide, index) => {
-  if (index !== 0) {
-    slide.classList.add('hidden');
+projectsSwiper.on('slideChange', () => {
+  const prevButton = document.querySelector('.projects-button-prev');
+  const nextButton = document.querySelector('.projects-button-next');
+
+  if (projectsSwiper.isBeginning) {
+    prevButton.classList.add('swiper-button-disabled');
+    prevButton.setAttribute('disabled', true);
+  } else {
+    prevButton.classList.remove('swiper-button-disabled');
+    prevButton.removeAttribute('disabled');
+  }
+
+  if (projectsSwiper.isEnd) {
+    nextButton.classList.add('swiper-button-disabled');
+    nextButton.setAttribute('disabled', true);
+  } else {
+    nextButton.classList.remove('swiper-button-disabled');
+    nextButton.removeAttribute('disabled');
+  }
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') {
+    projectsSwiper.slideNext();
+  } else if (e.key === 'ArrowLeft') {
+    projectsSwiper.slidePrev();
+  } else if (e.key === 'Tab') {
+    const focusedElement = document.activeElement;
+    const prevButton = document.querySelector('.projects-button-prev');
+    const nextButton = document.querySelector('.projects-button-next');
+    if (focusedElement === prevButton) {
+      e.preventDefault();
+      nextButton.focus();
+    } else if (focusedElement === nextButton) {
+      e.preventDefault();
+      prevButton.focus();
+    }
   }
 });
