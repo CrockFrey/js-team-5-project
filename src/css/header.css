@@ -1,0 +1,204 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header-section {
+  background-color: transparent;
+  position: absolute;
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  margin-top: 32px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-logo-block {
+  display: flex;
+}
+
+.header-logo {
+  border-radius: 19px;
+}
+
+.header-logo-name {
+  margin-left: 8px;
+}
+
+.header-order-button {
+  display: none;
+}
+
+.header-burger-button {
+  background-color: transparent;
+  border: none;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+}
+
+.header-burger-icon {
+  height: 28px;
+  width: 28px;
+}
+
+.header-menu {
+  display: none;
+}
+
+.mobile-menu {
+  display: flex;
+  opacity: 0;
+  z-index: 9999;
+  visibility: hidden;
+  transition: opacity 250ms;
+  position: absolute;
+  flex-direction: column;
+  background-image: image-set(
+    url(/img/hero/hero-mob-menu.png) 1x,
+    url(/img/hero/hero-mob-menu@2x.png) 2x
+  );
+  background-size: cover;
+  width: 100vh;
+  height: 100vh;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.mobile-menu-close-btn {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin-top: 32px;
+}
+
+.mobile-menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 0 auto;
+  margin-top: 242px;
+}
+
+.mobile-menu-item {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  transition: color 250ms;
+}
+
+.mobile-menu-item:hover {
+  color: #1abc9c;
+}
+
+.menu-order-button {
+  margin: 289px auto 64px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #16a085;
+  border-radius: 60px;
+  padding: 14px 31px;
+  width: 164px;
+  height: 45px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  transition: background-color 250ms;
+}
+
+.menu-order-button:hover {
+  background-color: #1abc9c;
+}
+
+.active {
+  visibility: visible;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .header-burger-button {
+    display: none;
+  }
+
+  .header-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 39px;
+  }
+
+  .header-menu-button {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
+    color: #fafafa;
+    padding: 10px;
+    width: 60px;
+    height: 39px;
+    transition: color 250ms;
+  }
+
+  .header-menu-button:hover {
+    color: #1abc9c;
+  }
+
+  .header-menu-list {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 250ms;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+  }
+
+  .header-menu-list.active {
+    visibility: visible;
+  }
+
+  .header-menu-item {
+    transition: 250ms color;
+  }
+
+  .header-menu-item:hover {
+    color: #1abc9c;
+  }
+  .header-order-button {
+    display: flex;
+    background-color: #16a085;
+    border: none;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 163px;
+    height: 55px;
+    color: #fafafa;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    transition: 250ms background-color;
+  }
+
+  .header-order-button:hover {
+    background-color: #1abc9c;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
