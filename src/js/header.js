@@ -10,7 +10,12 @@ const headerMenuItems = document.querySelectorAll('.header-menu-item');
 const headerOrderButton = document.querySelector('.header-order-button');
 const menuOrderButton = document.querySelector('.menu-order-button');
 
-const scrollToSection = event => {};
+const scrollToSection = id => {
+  window.scrollTo({
+    top: document.getElementById(id).offsetTop,
+    behavior: 'smooth',
+  });
+};
 
 const onBurgerBtnClick = () => {
   mobileMenu.classList.add('active');
@@ -23,27 +28,15 @@ const onCloseBtnClick = () => {
   body.style.overflow = 'visible';
 };
 const onMenuItemClick = event => {
-  console.log(event);
   event.preventDefault();
-  const sectionId = event.target.attributes[0].value.replace('#', '');
-  const element = document.getElementById(sectionId);
-  window.scrollTo({
-    top: element.offsetTop,
-    behavior: 'smooth',
-  });
+  scrollToSection(event.target.attributes[0].value.replace('#', ''));
   mobileMenu.style.opacity = '0';
   setTimeout(() => mobileMenu.classList.remove('active'), 250);
   body.style.overflow = 'visible';
 };
 const onHeaderItemClick = event => {
-  console.log(event);
   event.preventDefault();
-  const sectionId = event.target.attributes[0].value.replace('#', '');
-  const element = document.getElementById(sectionId);
-  window.scrollTo({
-    top: element.offsetTop,
-    behavior: 'smooth',
-  });
+  scrollToSection(event.target.attributes[0].value.replace('#', ''));
   headerMenuList.style.opacity = '0';
   setTimeout(() => headerMenuList.classList.remove('active'), 250);
 };
@@ -58,28 +51,16 @@ const onMenuBtnClick = () => {
   }
 };
 const onMenuOrderBtnClick = event => {
-  console.log(event);
   event.preventDefault();
-  const sectionId = event.target.attributes[0].value.replace('#', '');
-  const element = document.getElementById(sectionId);
-  window.scrollTo({
-    top: element.offsetTop,
-    behavior: 'smooth',
-  });
+  scrollToSection(event.target.attributes[0].value.replace('#', ''));
   mobileMenu.style.opacity = '0';
   setTimeout(() => mobileMenu.classList.remove('active'), 500);
   body.style.overflow = 'visible';
 };
 
 const onHeaderOrderBtnClick = event => {
-  console.log(event);
   event.preventDefault();
-  const sectionId = event.target.attributes[0].value.replace('#', '');
-  const element = document.getElementById(sectionId);
-  window.scrollTo({
-    top: element.offsetTop,
-    behavior: 'smooth',
-  });
+  scrollToSection(event.target.attributes[0].value.replace('#', ''));
 };
 
 burgerButton.addEventListener('click', onBurgerBtnClick);
