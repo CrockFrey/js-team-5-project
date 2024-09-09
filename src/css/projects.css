@@ -1,6 +1,4 @@
-.projects-section {
-  margin-bottom: 64px;
-}
+
 .projects-title {
   font-weight: 600;
   font-size: 16px;
@@ -116,9 +114,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .projects-section {
-    margin-bottom: 96px;
-  }
   .left-projects-card {
     padding: 64px;
   }
@@ -155,10 +150,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .projects-section {
-    margin-bottom: 164px;
-  }
-
   .projects-section ul.projects-cards .swiper-slide.projects-cards-item {
     display: flex;
     flex-direction: row;
