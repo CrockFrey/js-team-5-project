@@ -6,7 +6,7 @@
 .header-section {
   background-color: transparent;
   position: absolute;
-  z-index: 999999;
+  z-index: 999;
   display: flex;
   flex-direction: row;
   margin-top: 32px;
@@ -50,10 +50,11 @@
 .mobile-menu {
   display: flex;
   opacity: 0;
+  z-index: 9999;
+  visibility: hidden;
   transition: opacity 250ms;
   position: absolute;
   flex-direction: column;
-  z-index: 99999;
   background-image: image-set(
     url(/img/hero/hero-mob-menu.png) 1x,
     url(/img/hero/hero-mob-menu@2x.png) 2x
@@ -119,8 +120,7 @@
 }
 
 .active {
-  opacity: 1;
-  transition: opacity 250ms;
+  visibility: visible;
 }
 
 @media screen and (min-width: 768px) {
@@ -158,6 +158,7 @@
   }
 
   .header-menu-list {
+    visibility: hidden;
     opacity: 0;
     transition: opacity 250ms;
     display: flex;
@@ -168,8 +169,7 @@
   }
 
   .header-menu-list.active {
-    opacity: 1;
-    transition: opacity 250ms;
+    visibility: visible;
   }
 
   .header-menu-item {
