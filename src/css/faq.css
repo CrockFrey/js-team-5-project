@@ -1,0 +1,152 @@
+#faq {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    color: #FAFAFA;
+    font-size: 20px;
+    }
+    
+    .title {
+    color: rgba(250, 250, 250, 0.40);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    
+    margin-bottom: 32px;
+    }
+    
+    .accordion { 
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    }
+    
+    .accordion-and-item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    }
+    
+    .content-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border-top: 1px solid rgba(250, 250, 250, 0.20);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    }
+    
+    .label {
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: -0.4px;
+    
+    max-width: calc(100% - 90px);
+    color: #FAFAFA;
+    font-size: 20px;
+    }
+    
+    .content p {
+    color: rgba(250, 250, 250, 0.60);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.32px;
+    
+    padding-top: 16px;
+    }
+    
+    
+    .accordion-button {
+    display: flex;
+    padding: 7px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+    border-radius: 100px;
+    border: 1px solid rgba(250, 250, 250, 0.20);
+    background-color: transparent;
+    }
+    
+    
+    @media screen and (min-width:768px) and (max-width:1439px) {
+    
+    .label {
+    max-width: calc(100% - 110px);
+    }
+    
+    .content p {
+    width: 656px;
+    
+    padding-top: 26px;
+    }
+    
+    .content-box {
+    padding-top: 32px;
+    padding-bottom: 42px;
+    }
+    
+    .content-box.js-enabled .is-active {
+    padding-bottom: 24px;
+    }
+    
+    }
+    
+    @media screen and (min-width: 1440px) {
+    
+    .label {
+    max-width: calc(100% - 65px);
+    }
+    
+    .content-box {
+    padding-bottom: 26px;
+    border-right: 1px solid rgba(250, 250, 250, 0.20);
+    }
+    
+    .accordion li:nth-child(-n+3) {
+    padding-right: 32px;
+    }
+    
+    .accordion li:nth-last-child(-n+3) {
+    border-right: none;
+    padding-left: 32px;
+    }
+    
+    .accordion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "question1 question4"
+        "question2 question5"
+        "question3 question6";
+    border-bottom: 1px solid rgba(250, 250, 250, 0.20);
+    }
+    
+    }
+    
+    /* accordion */
+    
+    .content-box.js-enabled .content p {
+        visibility: hidden;
+        }
+        
+    .js-enabled.is-active .content p {
+        visibility: visible;
+        }
+
+    .js-enabled.is-active .accordion-button svg  {
+    transform: rotate(-180deg);
+    }
+    
+    /* для потрібного порядку розшташування лішок */
+    .accordion > li:nth-child(1) { grid-area: question1; }
+    .accordion > li:nth-child(2) { grid-area: question2; }
+    .accordion > li:nth-child(3) { grid-area: question3; }
+    .accordion > li:nth-child(4) { grid-area: question4; }
+    .accordion > li:nth-child(5) { grid-area: question5; }
+    .accordion > li:nth-child(6) { grid-area: question6; }
