@@ -1,3 +1,8 @@
+.hero {
+  display: flex;
+  justify-content: center;
+}
+
 .hero-section {
   position: relative;
   background-image: image-set(
@@ -39,10 +44,17 @@
   border-radius: 60px;
   width: 37px;
   height: 37px;
+  padding: 10px;
   font-weight: 500;
   font-size: 14px;
   letter-spacing: -0.02em;
   color: #fafafa;
+  transition: 150ms border;
+  cursor: pointer;
+}
+
+.hero-socials-item:hover {
+  border: 1px solid #fafafa;
 }
 
 .hero-socials-mail {
@@ -59,6 +71,12 @@
   font-size: 14px;
   letter-spacing: -0.02em;
   padding: 10px;
+  cursor: pointer;
+  transition: 150ms border;
+}
+
+.hero-socials-mail:hover {
+  border: 1px solid #fafafa;
 }
 
 @media screen and (min-width: 768px) {
@@ -84,11 +102,13 @@
     width: 55px;
     height: 55px;
     font-size: 16px;
+    padding: 18px;
   }
   .hero-socials-mail {
     width: 223px;
     height: 55px;
     font-size: 16px;
+    padding: 18px;
   }
 }
 
@@ -99,6 +119,9 @@
       url(/img/hero/hero-desktop@2x.png) 2x
     );
     height: 900px;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .hero-title {
     margin: 0 146px;

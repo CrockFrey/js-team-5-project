@@ -1,7 +1,12 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
 .header-section {
   background-color: transparent;
   position: absolute;
-  z-index: 99999;
+  z-index: 999999;
   display: flex;
   flex-direction: row;
   margin-top: 32px;
@@ -43,10 +48,12 @@
 }
 
 .mobile-menu {
-  display: none;
-  flex-direction: column;
+  display: flex;
+  opacity: 0;
+  transition: opacity 250ms;
   position: absolute;
-  z-index: 999999;
+  flex-direction: column;
+  z-index: 99999;
   background-image: image-set(
     url(/img/hero/hero-mob-menu.png) 1x,
     url(/img/hero/hero-mob-menu@2x.png) 2x
@@ -59,6 +66,7 @@
 }
 
 .mobile-menu-close-btn {
+  display: flex;
   background-color: transparent;
   border: none;
   width: 28px;
@@ -81,6 +89,11 @@
   letter-spacing: -0.02em;
   text-decoration: underline;
   text-decoration-skip-ink: none;
+  transition: color 250ms;
+}
+
+.mobile-menu-item:hover {
+  color: #1abc9c;
 }
 
 .menu-order-button {
@@ -98,9 +111,23 @@
   font-size: 14px;
   letter-spacing: -0.02em;
   color: #fafafa;
+  transition: background-color 250ms;
+}
+
+.menu-order-button:hover {
+  background-color: #1abc9c;
+}
+
+.active {
+  opacity: 1;
+  transition: opacity 250ms;
 }
 
 @media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+
   .header-burger-button {
     display: none;
   }
@@ -115,6 +142,7 @@
   .header-menu-button {
     background-color: transparent;
     border: none;
+    display: flex;
     font-weight: 500;
     letter-spacing: -0.02em;
     text-decoration: underline;
@@ -122,16 +150,35 @@
     padding: 10px;
     width: 60px;
     height: 39px;
+    transition: color 250ms;
+  }
+
+  .header-menu-button:hover {
+    color: #1abc9c;
   }
 
   .header-menu-list {
-    display: none;
+    opacity: 0;
+    transition: opacity 250ms;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
+    gap: 5px;
     margin-top: 8px;
   }
 
+  .header-menu-list.active {
+    opacity: 1;
+    transition: opacity 250ms;
+  }
+
+  .header-menu-item {
+    transition: 250ms color;
+  }
+
+  .header-menu-item:hover {
+    color: #1abc9c;
+  }
   .header-order-button {
     display: flex;
     background-color: #16a085;
@@ -145,6 +192,11 @@
     color: #fafafa;
     font-weight: 500;
     letter-spacing: -0.02em;
+    transition: 250ms background-color;
+  }
+
+  .header-order-button:hover {
+    background-color: #1abc9c;
   }
 }
 
