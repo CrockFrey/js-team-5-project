@@ -59,7 +59,7 @@
 }
 
 .footer-span {
-  color: #2b4441;
+  color: #16a085;
 }
 
 .form-footer {
@@ -103,7 +103,7 @@
 }
 
 .input-form-textinput.success {
-  border-bottom: 1px solid #3cbc81;
+  border-bottom: 1px solid #16a085;
 }
 .input-form-text.error {
   border-bottom: 1px solid #e74a3b;
@@ -120,7 +120,7 @@
 }
 
 .message.success {
-  color: #3cbc81;
+  color: #16a085;
 }
 .message.error {
   color: #e74a3b;
@@ -132,7 +132,7 @@
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  background-color: #2b4441;
+  background-color: #16a085;
   color: inherit;
   font-size: 16px;
   letter-spacing: -0.02em;
@@ -140,10 +140,12 @@
     background-color 0.3s ease-in-out;
 }
 
-.send-btn-footer:hover {
+.send-btn-footer:hover,
+.send-btn-footer:focus {
   transform: scale(1.05);
   border: 1px solid #fff;
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background-color: #1abc9c;
 }
 
 .footer-list {
@@ -184,7 +186,7 @@
 .link-footer:hover,
 .link-footer:focus {
   transform: scale(1.05);
-  color: var(--hover-color);
+  color: #1abc9c;
 }
 
 /* ========================================================================================================================================================
