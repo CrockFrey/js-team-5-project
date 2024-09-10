@@ -3,7 +3,7 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import Swiper from 'swiper';
 import 'swiper/css';
-import {Autoplay, Keyboard } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
 
 
 const reviewList = document.querySelector('.reviews-list');
@@ -25,7 +25,7 @@ async function axiosReviews() {
 
 
     const reviewSwiper = new Swiper('.review-swiper', {
-      modules: [Autoplay, Keyboard],
+      modules: [ Navigation, Autoplay ],
       breakpoints: {
         375: {
           slidesPerView: 1,
@@ -41,8 +41,9 @@ async function axiosReviews() {
         }
       },
         keyboard: {
-          enabled: true,
-          onlyInViewport: true,
+           enabled: true,
+           onlyInViewport: true,
+           pageUpDown: true,
       },
       autoplay: {
         delay: 3000,
