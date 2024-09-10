@@ -62,6 +62,7 @@ function openModal({ title, message }) {
       <h2 class="modal-title">${title}</h2><p class="modal-description">${message}</p></div></div>`;
   refs.footerElem.insertAdjacentHTML('afterend', markup);
   document.body.classList.add('no-scroll');
+  document.body.classList.remove('no-scroll');
   addModalEventListeners();
   refs.formElem.reset();
 }
