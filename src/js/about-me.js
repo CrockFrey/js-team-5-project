@@ -31,13 +31,13 @@ const swiper = new Swiper('.about-skills-swiper', {
   },
   on: {
     init: function () {
-      document.querySelector('.swiper-slide').style.backgroundColor = '#2b4441';
+      document.querySelector('.swiper-slide').style.backgroundColor = '#16a085';
     },
     slideChange: function () {
       const previousSlide = this.slides[this.previousIndex];
       const activeSlide = this.slides[this.activeIndex];
       previousSlide.style.background = '';
-      activeSlide.style.backgroundColor = '#2b4441';
+      activeSlide.style.backgroundColor = '#16a085';
     },
   },
 });

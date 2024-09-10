@@ -1,0 +1,425 @@
+.section-footer {
+  background-image: url('/img/footer/background_mobile@1x.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.footer-container {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-image {
+  float: left;
+  border-radius: 12px;
+  width: 44px;
+  height: 44px;
+  margin-right: 8px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-title {
+  height: 40px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  transition: text-shadow 500ms ease;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.footer-title-bot {
+  height: 40px;
+  transition: text-shadow 500ms ease;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.footer-span {
+  color: #16a085;
+}
+
+.form-footer {
+  margin-top: 63px;
+  position: relative;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.input-form-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  width: 100%;
+  height: 44px;
+  color: inherit;
+  border: none;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  background-color: transparent;
+  margin-bottom: 16px;
+  transition: border-bottom 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-form-text:focus,
+.input-form-text:hover {
+  background-color: transparent;
+  border-bottom: 1px solid rgba(250, 250, 250, 1);
+}
+
+.input-form-text::placeholder {
+  color: rgba(219, 180, 180, 0.6);
+}
+#comments {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.input-form-textinput.success {
+  border-bottom: 1px solid #16a085;
+}
+.input-form-text.error {
+  border-bottom: 1px solid #e74a3b;
+}
+
+.message {
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  position: absolute;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  display: none;
+}
+
+.message.success {
+  color: #16a085;
+}
+.message.error {
+  color: #e74a3b;
+}
+
+.send-btn-footer {
+  margin-top: 16px;
+  border: none;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background-color: #16a085;
+  color: inherit;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out,
+    background-color 0.3s ease-in-out;
+}
+
+.send-btn-footer:hover,
+.send-btn-footer:focus {
+  transform: scale(1.05);
+  border: 1px solid #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  background-color: #1abc9c;
+}
+
+.footer-list {
+  display: flex;
+  margin-top: 64px;
+  gap: 4px;
+  list-style: none;
+  font-style: normal;
+}
+
+@media screen and (max-width: 374px) {
+  .link-footer {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .link-footer {
+    font-size: 14px;
+    outline: none;
+    border: none;
+  }
+}
+
+.link-footer {
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  padding: 10px 12px;
+  margin-bottom: 8px;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  display: flex;
+  transition: transform 300ms ease-in-out, color 300ms ease-in-out;
+}
+
+.link-footer:hover,
+.link-footer:focus {
+  transform: scale(1.05);
+  color: #1abc9c;
+}
+
+/* ========================================================================================================================================================
+backdrop
+======================================================================================================================================================== */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999999;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 16, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.no-scroll {
+  overflow: hidden;
+}
+/* ========================================================================================================================================================
+  modalka
+  ======================================================================================================================================================== */
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 343px;
+  min-height: 276px;
+  padding: 64px 32px;
+  margin: 0;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+  border-radius: 20px;
+  background-color: #1c1d20;
+  transition: opacity 1000ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.modal.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  line-height: 0;
+  cursor: pointer;
+  color: #fafafa;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: transform 0.3s ease,
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-btn:hover {
+  background-color: #16a085;
+}
+
+.modal-close-btn-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-title {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.modal-description {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+.backdrop.is-open .modal {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.backdrop.fade-out .modal {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+@media only screen and (min-width: 768px) {
+  @media (max-width: 1439px) {
+    .section-footer {
+      background-image: url('/img/footer/background_tab@1x.png');
+    }
+
+    @media (min-resolution: 192dpi) {
+      .section-footer {
+        background-image: url('/img/footer/background_tab@2x.png');
+      }
+    }
+  }
+
+  .footer-container {
+    padding-top: 80px;
+    padding-bottom: 169px;
+  }
+
+  .footer-title {
+    font-size: 64px;
+  }
+
+  .footer-title-bot {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 100%;
+    letter-spacing: -0.03em;
+    text-transform: uppercase;
+  }
+
+  .footer-image {
+    border-radius: 24px;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+  }
+
+  .input-form-text {
+    margin: 0;
+    width: 245px;
+  }
+
+  .form-footer {
+    gap: 32px;
+    display: flex;
+    align-items: center;
+  }
+
+  .send-btn-footer {
+    margin-top: 18px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .footer-list {
+    margin-top: 18px;
+    gap: 8px;
+  }
+
+  .link-footer {
+    padding: 18px 32px;
+    font-size: 16px;
+    gap: 8px;
+  }
+
+  .modal {
+    width: 492px;
+    min-height: 246px;
+    padding: 64px;
+  }
+
+  .modal-close-btn {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .section-footer {
+    padding: 0;
+    background-image: url('/img/footer/background_desk@1x.png');
+  }
+  @media (min-resolution: 192dpi) {
+    .section-footer {
+      background-image: url('/img/footer/background_desk@2x.png');
+    }
+  }
+
+  .footer-container {
+    padding-left: 196px;
+    padding-right: 196px;
+  }
+
+  .input-form-text {
+    width: 390px;
+  }
+
+  .send-btn-footer {
+    margin-top: 18px;
+    margin-left: 54px;
+    width: 150px;
+    height: 150px;
+  }
+}
