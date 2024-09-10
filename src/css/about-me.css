@@ -285,6 +285,10 @@
   .about-me-content-list {
     row-gap: 96px;
   }
+  .about-skills-container {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
   .about-skills-swiper {
     max-width: 1200px;
   }
@@ -295,6 +299,5 @@
 
   .about-skills-btn {
     margin-left: 72px;
-    margin-right: 64px;
   }
 }
