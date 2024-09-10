@@ -1,14 +1,15 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
 import Swiper from 'swiper';
 import 'swiper/css';
+import {Autoplay, Keyboard } from 'swiper/modules';
 
 
 const reviewList = document.querySelector('.reviews-list');
 const notFoundText = document.querySelector('.not-found-text');
 const nextReviewBtn = document.querySelector('.review-btn-next');
 const prevReviewBtn = document.querySelector('.review-btn-prev');
-const reviewSlide = document.querySelector('.swiper-slide');
 
 axiosReviews();
 
@@ -23,50 +24,74 @@ async function axiosReviews() {
     reviewList.innerHTML = getReviews;
 
 
-    const reviewSwiper = new Swiper('.swiper-reviews', {
-      isLocked: false,
-      allowSlideNext: true,
-      allowSlidePrev: true,
+    const reviewSwiper = new Swiper('.review-swiper', {
+      modules: [Autoplay, Keyboard],
       breakpoints: {
         375: {
           slidesPerView: 1,
+          spaceBetween: 16,
         },
         768: {
           slidesPerView: 2,
+          spaceBetween: 16,
         },
         1440: {
           slidesPerView: 4,
+          spaceBetween: 16,
         }
       },
-      keyboard: {
-        enabled: true,
-        onlyInViewport: true,
+        keyboard: {
+          enabled: true,
+          onlyInViewport: true,
       },
-
-      slideChange: function () {
-        nextReviewBtn.addEventListener('click', function () {
-          reviewSlide.allowSlideNext();
-        });
-
-        prevReviewBtn.addEventListener('click', function () {
-          reviewSlide.allowSlidePrev();
-        });
-
-          if (reviewSwiper.isBeginning) {
-            prevReviewBtn.classList.add('review-btn-disabled');
-            prevReviewBtn.setAtribute('disabled', true);
-          }
-
-          else if (reviewSwiper.isEnd) {
-            nextReviewBtn.classList.add('review-btn-disabled');
-            nextReviewBtn.setAtribute('disabled', true);
-          }
-      }
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: true,
+        pauseOnMouseEnter: true,
+        }
     })
   
-    console.log(reviewSwiper);
-        
+    nextReviewBtn.addEventListener('click', function () {
+    reviewSwiper.slideNext();
+    });
     
+    prevReviewBtn.addEventListener('click', function () {
+      reviewSwiper.slidePrev();
+    });
+    
+    if (reviewSwiper.activeIndex === 0) {
+      nextReviewBtn.classList.remove('review-btn-disabled');
+      prevReviewBtn.classList.add('review-btn-disabled');
+      prevReviewBtn.setAttribute('disabled', true);
+    }
+    
+    else if (reviewSwiper.activeIndex === 5) {
+      nextReviewBtn.classList.add('review-btn-disabled');
+      prevReviewBtn.classList.remove('review-btn-disabled');
+    }
+    
+    else {
+      nextReviewBtn.classList.remove('review-btn-disabled');
+      prevReviewBtn.classList.remove('review-btn-disabled');
+    };
+    
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'ArrowLeft') {
+        reviewSwiper.slidePrev();
+      } else if (ev.key === 'ArrowRight') {
+        reviewSwiper.slideNext();
+      } else if (ev.key === 'Tab') {
+        ev.preventDefault();
+        if (document.activeElement === prevReviewBtn) {
+          ev.preventDefault();
+          prevReviewBtn.focus();
+        } else if (document.activeElement === nextReviewBtn) {
+          ev.preventDefault();
+          nextReviewBtn.focus();
+        }
+      }
+    })
+        
   } catch (err) {
       notFoundText.classList.remove('is-hidden');
         iziToast.info({
@@ -82,9 +107,9 @@ async function axiosReviews() {
 
 function renderReviews(review) {
         return `<li class="review-item swiper-slide">
-    <img class="review-img" src="${review.avatar_url}" alt="${review.author}" width="48" height="48">
+    <img class="review-img" src="${review.avatar_url}" alt="${review.author}" width="48" height="48" loading="lazy">
     <h3 class="review-name">${review.author}</h3>
     <p class="review-text">${review.review}</p>
+    <div class="swiper-lazy-preloader"></div>
     </li>`
     }
-
