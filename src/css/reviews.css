@@ -35,9 +35,9 @@
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 20px;
     padding: 32px 24px;
-    max-width: 343px;
-    min-height: 302px;
+    max-width: 344px;
 }
+
 
 .review-img {
     border-radius: 10px;
@@ -82,33 +82,18 @@
     border: 1px solid rgba(250, 250, 250, 0.5);
     border-radius: 60px;
     padding: 14px;
-    margin-top: 0;
     width: 52px;
     height: 52px;
-    transition: border-color 0.250s;
 }
 
-.review-btn-prev:hover,
-.review-btn-next:hover {
-        border-color:rgba(250, 250, 250, 0.2);
-}
 
 @media screen and (min-width: 768px) {
-    .review-btn-prev:hover,
-    .review-btn-next:hover {
+    .review-btn-prev,
+    .review-btn-next {
         padding: 18px;
         width: 68px;
         height: 68px;
     }
-}
-
-.review-btn-prev .review-btn-disabled,
-.review-btn-next .review-btn-disabled {
-    border: 1px solid rgba(250, 250, 250, 0.2);
-}
-
-.review-btn-disabled > .arrow-icon {
-    stroke: #3B3B3B;
 }
 
 .arrow-icon {
@@ -116,12 +101,6 @@
     height: 24px;
     stroke: #fafafa;
     fill: none;
-    transition: stroke 0.250s;
-}
-
-.review-btn-prev:hover > svg,
-.review-btn-next:hover > svg {
-    stroke: #3B3B3B;
 }
 
 @media screen and (min-width: 768px) {
@@ -131,12 +110,17 @@
     }
 }
 
+.review-btn-disabled {
+    opacity: 0.5;
+    cursor: default;
+}
+
 .is-hidden {
     display: none;
 }
 
 .not-found-text {
-    align-self: center;
+    text-align: center;
     margin-right: auto;
     margin-left: auto;
     color: rgba(250, 250, 250, 0.6);

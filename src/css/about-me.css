@@ -27,8 +27,10 @@
   max-width: 100%;
   min-height: 500px;
   border-radius: 24px;
-  background-image: image-set(url('../img/about/about-mob.jpg') 1x,
-      url('../img/about/about-mob@2x.jpg') 2x);
+  background-image: image-set(
+    url('../img/about/about-mob.jpg') 1x,
+    url('../img/about/about-mob@2x.jpg') 2x
+  );
 }
 
 .about-me-img-person-picture {
@@ -51,11 +53,11 @@
   line-height: 117%;
   letter-spacing: -0.03em;
   text-transform: uppercase;
-  color: #FAFAFA;
+  color: #fafafa;
 }
 
 .about-me-img-span-functional {
-  color: #16A085;
+  color: #16a085;
 }
 
 .about-me-img-span-websites {
@@ -87,7 +89,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: -0.02em;
-  color: #FAFAFA;
+  color: #fafafa;
 }
 
 .about-accordion-item {
@@ -126,17 +128,17 @@
 .svg-about-icon {
   width: 18px;
   height: 18px;
-  stroke: #FAFAFA;
-  fill: #FAFAFA;
+  stroke: #fafafa;
+  fill: #fafafa;
 }
 
 .about-accordion-title:hover {
-  text-shadow: 0 0 0px #FAFAFA;
+  text-shadow: 0 0 0px #fafafa;
   transition: text-shadow 0.5s ease;
 }
 
 .btn-icon:hover {
-  border: 1px solid #FAFAFA;
+  border: 1px solid #fafafa;
   transition: border 0.5s ease;
 }
 
@@ -154,7 +156,6 @@
 /*                                                       Swiper                                                               */
 .about-skills-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -186,18 +187,20 @@
 .about-arrow-right {
   width: 28px;
   height: 28px;
-  stroke: #3B3B3B;
+  stroke: #3b3b3b;
   fill: none;
 }
 
 .about-arrow-right:hover {
-  stroke: #FAFAFA;
+  stroke: #fafafa;
 }
 
 @media screen and (min-width: 768px) {
   .about-me-img-person {
-    background-image: image-set(url('../img/about/about-tab.jpg') 1x,
-        url('../img/about/about-tab@2x.jpg') 2x);
+    background-image: image-set(
+      url('../img/about/about-tab.jpg') 1x,
+      url('../img/about/about-tab@2x.jpg') 2x
+    );
   }
 
   .about-me-content-list {
@@ -265,8 +268,10 @@
   }
 
   .about-me-img-person {
-    background-image: image-set(url('../img/about/about-desktop.jpg') 1x,
-        url('../img/about/about-desktop@2x.jpg') 2x);
+    background-image: image-set(
+      url('../img/about/about-desktop.jpg') 1x,
+      url('../img/about/about-desktop@2x.jpg') 2x
+    );
     min-width: 680px;
   }
 
@@ -280,9 +285,19 @@
   .about-me-content-list {
     row-gap: 96px;
   }
+  .about-skills-container {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .about-skills-swiper {
+    max-width: 1200px;
+  }
+  .about-skills-list {
+    max-width: 2000px;
+    min-width: 2000px;
+  }
 
   .about-skills-btn {
     margin-left: 72px;
   }
 }
-

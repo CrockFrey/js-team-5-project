@@ -1,8 +1,7 @@
-.hero {
-  display: flex;
-  justify-content: center;
+.align-container {
+  padding-left: 0;
+  padding-right: 0;
 }
-
 .hero-section {
   position: relative;
   background-image: image-set(
@@ -12,9 +11,10 @@
   background-size: cover;
   height: 812px;
   display: flex;
-  margin: 0;
   flex-direction: column;
   justify-content: flex-end;
+  padding-left: 16px;
+  padding-right: git16px;
 }
 
 .hero-title {
@@ -29,6 +29,7 @@
 
 .hero-socials-list {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 4px;
   margin-bottom: 32px;
@@ -86,6 +87,8 @@
       url(/img/hero/hero-tab@2x.png) 2x
     );
     height: 1024px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   .hero-title {

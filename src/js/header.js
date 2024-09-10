@@ -1,6 +1,6 @@
 const body = document.querySelector('body');
 const header = document.querySelector('.header-section');
-const burgerButton = document.querySelector('.header-burger-icon');
+const burgerButton = document.querySelector('.header-burger-button');
 const mobileMenu = document.querySelector('.mobile-menu');
 const closeButton = document.querySelector('.mobile-menu-close-btn');
 const mobileMenuItems = document.querySelectorAll('.mobile-menu-item');

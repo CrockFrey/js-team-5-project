@@ -11,6 +11,7 @@ const notFoundText = document.querySelector('.not-found-text');
 const nextReviewBtn = document.querySelector('.review-btn-next');
 const prevReviewBtn = document.querySelector('.review-btn-prev');
 
+
 axiosReviews();
 
 async function axiosReviews() {
@@ -29,7 +30,6 @@ async function axiosReviews() {
       breakpoints: {
         375: {
           slidesPerView: 1,
-          spaceBetween: 16,
         },
         768: {
           slidesPerView: 2,
@@ -49,9 +49,15 @@ async function axiosReviews() {
         delay: 3000,
         disableOnInteraction: true,
         pauseOnMouseEnter: true,
-        }
+      },
+
+      on: {
+          slideChange: function () {
+              updateReviewBtnStates();
+          },
+      }
     })
-  
+
     nextReviewBtn.addEventListener('click', function () {
     reviewSwiper.slideNext();
     });
@@ -59,23 +65,26 @@ async function axiosReviews() {
     prevReviewBtn.addEventListener('click', function () {
       reviewSwiper.slidePrev();
     });
+
+    function updateReviewBtnStates() {
+      if (reviewSwiper.isBeginning) {
+        nextReviewBtn.classList.remove('review-btn-disabled');
+        prevReviewBtn.classList.add('review-btn-disabled');
+      }
     
-    if (reviewSwiper.activeIndex === 0) {
-      nextReviewBtn.classList.remove('review-btn-disabled');
-      prevReviewBtn.classList.add('review-btn-disabled');
-      prevReviewBtn.setAttribute('disabled', true);
+      else if (reviewSwiper.isEnd) {
+        nextReviewBtn.classList.add('review-btn-disabled');
+        prevReviewBtn.classList.remove('review-btn-disabled');
+      }
+    
+      else {
+        nextReviewBtn.classList.remove('review-btn-disabled');
+        prevReviewBtn.classList.remove('review-btn-disabled');
+      };
     }
-    
-    else if (reviewSwiper.activeIndex === 5) {
-      nextReviewBtn.classList.add('review-btn-disabled');
-      prevReviewBtn.classList.remove('review-btn-disabled');
-    }
-    
-    else {
-      nextReviewBtn.classList.remove('review-btn-disabled');
-      prevReviewBtn.classList.remove('review-btn-disabled');
-    };
-    
+
+    updateReviewBtnStates();
+
     document.addEventListener('keydown', function (ev) {
       if (ev.key === 'ArrowLeft') {
         reviewSwiper.slidePrev();
