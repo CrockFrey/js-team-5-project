@@ -1,5 +1,6 @@
 
 .reviews-title {
+    margin-top: 64px;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 16px;
@@ -8,10 +9,26 @@
     opacity: 0.4;
 }
 
+@media screen and (min-width: 768px) {
+    .reviews-title {
+        margin-top: 96px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .reviews-title {
+        margin-top: 164px;
+    }
+}
+
 .reviews-list {
     margin: 32px 0;
     display: flex;
     flex-direction: row;
+}
+
+.reviews-list .review-item:hover {
+    background-color: var(--cards);
 }
 
 .review-item {
@@ -20,11 +37,6 @@
     padding: 32px 24px;
     max-width: 343px;
     min-height: 302px;
-}
-
-
-.review-item:not(:last-child) {
-    margin-right: 16px;
 }
 
 .review-img {
@@ -50,12 +62,6 @@
     height: 158px;
 }
 
-.reviews-info {
-   position: static;
-   width: 100%;
-   height: 100%;
-}
-
 .reviews-btns {
     display: flex;
     gap: 12px;
@@ -79,32 +85,47 @@
     margin-top: 0;
     width: 52px;
     height: 52px;
+    transition: border-color 0.250s;
+}
+
+.review-btn-prev:hover,
+.review-btn-next:hover {
+        border-color:rgba(250, 250, 250, 0.2);
 }
 
 @media screen and (min-width: 768px) {
-    .review-btn-prev,
-    .review-btn-next {
+    .review-btn-prev:hover,
+    .review-btn-next:hover {
         padding: 18px;
         width: 68px;
         height: 68px;
     }
 }
 
-.review-btn-disabled {
+.review-btn-prev .review-btn-disabled,
+.review-btn-next .review-btn-disabled {
     border: 1px solid rgba(250, 250, 250, 0.2);
-    color: #3B3B3B;
 }
 
+.review-btn-disabled > .arrow-icon {
+    stroke: #3B3B3B;
+}
 
 .arrow-icon {
     width: 24px;
     height: 24px;
     stroke: #fafafa;
     fill: none;
+    transition: stroke 0.250s;
+}
+
+.review-btn-prev:hover > svg,
+.review-btn-next:hover > svg {
+    stroke: #3B3B3B;
 }
 
 @media screen and (min-width: 768px) {
-    .rarrow-icon {
+    .arrow-icon {
         width: 32px;
         height: 32px;
     }
