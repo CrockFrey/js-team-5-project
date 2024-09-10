@@ -1,8 +1,3 @@
-.header {
-  display: flex;
-  justify-content: center;
-}
-
 .header-section {
   background-color: transparent;
   position: absolute;
@@ -11,7 +6,8 @@
   flex-direction: row;
   margin-top: 32px;
   justify-content: space-between;
-  width: 100%;
+  width: calc(100% - 32px);
+  max-width: 343px;
 }
 
 .header-logo-block {
@@ -33,9 +29,11 @@
 .header-burger-button {
   background-color: transparent;
   border: none;
-  width: 28px;
   height: 28px;
-  padding: 0;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-burger-icon {
@@ -60,10 +58,12 @@
     url(/img/hero/hero-mob-menu@2x.png) 2x
   );
   background-size: cover;
-  width: 100vh;
+  width: 100vw;
   height: 100vh;
   align-items: flex-end;
   justify-content: flex-end;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .mobile-menu-close-btn {
@@ -124,6 +124,9 @@
 }
 
 @media screen and (min-width: 768px) {
+  .header-section {
+    max-width: 704px;
+  }
   .mobile-menu {
     display: none;
   }
@@ -201,4 +204,7 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .header-section {
+    max-width: none;
+  }
 }
