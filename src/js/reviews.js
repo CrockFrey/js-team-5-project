@@ -66,7 +66,6 @@ async function axiosReviews() {
       reviewSwiper.slidePrev();
     });
 
-    console.log(reviewSwiper);
     function updateReviewBtnStates() {
       if (reviewSwiper.isBeginning) {
         nextReviewBtn.classList.remove('review-btn-disabled');
@@ -83,6 +82,8 @@ async function axiosReviews() {
         prevReviewBtn.classList.remove('review-btn-disabled');
       };
     }
+
+    updateReviewBtnStates();
 
     document.addEventListener('keydown', function (ev) {
       if (ev.key === 'ArrowLeft') {

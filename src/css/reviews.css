@@ -84,18 +84,8 @@
     padding: 14px;
     width: 52px;
     height: 52px;
-    transition: border-color 0.250s;
 }
 
-.review-btn-prev:hover,
-.review-btn-next:hover {
-        border-color:rgba(250, 250, 250, 0.2);
-}
-
-.review-btn-prev:hover>svg,
-.review-btn-next:hover>svg {
-    stroke: #3B3B3B;
-}
 
 @media screen and (min-width: 768px) {
     .review-btn-prev,
@@ -111,7 +101,6 @@
     height: 24px;
     stroke: #fafafa;
     fill: none;
-    transition: stroke 0.250s;
 }
 
 @media screen and (min-width: 768px) {
@@ -121,15 +110,9 @@
     }
 }
 
-/* .review-btn-prev .review-btn-disabled,
-.review-btn-next .review-btn-disabled  */
 .review-btn-disabled {
-    border: 1px solid rgba(250, 250, 250, 0.2);
+    opacity: 0.5;
     cursor: default;
-}
-
-.review-btn-disabled>.arrow-icon {
-    stroke: #3B3B3B;
 }
 
 .is-hidden {
@@ -137,7 +120,7 @@
 }
 
 .not-found-text {
-    align-self: center;
+    text-align: center;
     margin-right: auto;
     margin-left: auto;
     color: rgba(250, 250, 250, 0.6);
