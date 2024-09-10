@@ -1,9 +1,10 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-import { Navigation, Keyboard } from 'swiper/modules';
+import { Navigation, Autoplay } from 'swiper/modules';
+
 
 const projectsSwiper = new Swiper('.projects-list', {
-  modules: [Navigation, Keyboard],
+  modules: [Navigation, Autoplay],
   slidesPerView: 1,
   spaceBetween: 16,
   loop: false,
@@ -12,19 +13,28 @@ const projectsSwiper = new Swiper('.projects-list', {
     onlyInViewport: true,
     pageUpDown: true,
   },
+
   navigation: {
     nextEl: '.projects-button-next',
     prevEl: '.projects-button-prev',
-    disabledClass: 'swiper-button-disabled',
   },
+
+    autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+    pauseOnMouseEnter: true,
+  },
+    
   breakpoints: {
     768: {
       slidesPerView: 1,
       spaceBetween: 16,
+      loop: false,
     },
     1440: {
       slidesPerView: 1,
       spaceBetween: 16,
+      loop: false,
     },
   },
 });
@@ -59,6 +69,7 @@ document.addEventListener('keydown', e => {
     const focusedElement = document.activeElement;
     const prevButton = document.querySelector('.projects-button-prev');
     const nextButton = document.querySelector('.projects-button-next');
+
     if (focusedElement === prevButton) {
       e.preventDefault();
       nextButton.focus();
