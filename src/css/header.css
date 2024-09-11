@@ -53,12 +53,11 @@
   transition: opacity 250ms;
   position: absolute;
   flex-direction: column;
-  background-image:
-    url(/img/hero/hero-mob-menu.png)
-  ;
+  background-image: url(/img/hero/hero-mob-menu.png);
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  min-width: 320px;
+  height: 812px;
   align-items: flex-end;
   justify-content: flex-end;
   padding-left: 16px;
