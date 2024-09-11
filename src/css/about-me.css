@@ -27,10 +27,13 @@
   max-width: 100%;
   min-height: 500px;
   border-radius: 24px;
-  background-image: image-set(
-    url('../img/about/about-mob.jpg') 1x,
-    url('../img/about/about-mob@2x.jpg') 2x
-  );
+  background-image:
+    url('../img/about/about-mob.jpg')
+}
+@media (min-resolution: 192dpi) {
+  .aboutus-photo-box {
+    background-image: url('../img/about/about-mob@2x.jpg');
+  }
 }
 
 .about-me-img-person-picture {
@@ -197,11 +200,14 @@
 
 @media screen and (min-width: 768px) {
   .about-me-img-person {
-    background-image: image-set(
-      url('../img/about/about-tab.jpg') 1x,
-      url('../img/about/about-tab@2x.jpg') 2x
-    );
+    background-image:
+      url('../img/about/about-tab.jpg')
   }
+@media (min-resolution: 192dpi) {
+  .about-me-img-person {
+    background-image: url('../img/about/about-tab@2x.jpg');
+  }
+}
 
   .about-me-content-list {
     row-gap: 64px;
@@ -268,12 +274,17 @@
   }
 
   .about-me-img-person {
-    background-image: image-set(
-      url('../img/about/about-desktop.jpg') 1x,
-      url('../img/about/about-desktop@2x.jpg') 2x
-    );
+    background-image:
+      url('../img/about/about-desktop.jpg');
     min-width: 680px;
   }
+  
+  @media (min-resolution: 192dpi) {
+    .about-me-img-person {
+      background-image: url('../img/about/about-desktop@2x.jpg');
+    }
+  }
+  
 
   .about-accordion-dscr {
     gap: 32px;
