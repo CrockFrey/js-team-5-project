@@ -28,11 +28,11 @@
   min-height: 500px;
   border-radius: 24px;
   background-image:
-    url('../img/about/about-mob.jpg')
+    url('../img/about/about-mob.webp')
 }
 @media (min-resolution: 192dpi) {
   .aboutus-photo-box {
-    background-image: url('../img/about/about-mob@2x.jpg');
+    background-image: url('../img/about/about-mob@2x.webp');
   }
 }
 
@@ -201,11 +201,11 @@
 @media screen and (min-width: 768px) {
   .about-me-img-person {
     background-image:
-      url('../img/about/about-tab.jpg')
+      url('../img/about/about-tab.webp')
   }
 @media (min-resolution: 192dpi) {
   .about-me-img-person {
-    background-image: url('../img/about/about-tab@2x.jpg');
+    background-image: url('../img/about/about-tab@2x.webp');
   }
 }
 
@@ -275,13 +275,13 @@
 
   .about-me-img-person {
     background-image:
-      url('../img/about/about-desktop.jpg');
+      url('../img/about/about-desktop.webp');
     min-width: 680px;
   }
   
   @media (min-resolution: 192dpi) {
     .about-me-img-person {
-      background-image: url('../img/about/about-desktop@2x.jpg');
+      background-image: url('../img/about/about-desktop@2x.webp');
     }
   }
   
