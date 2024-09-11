@@ -121,7 +121,7 @@
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 50%;
   padding: 9px;
-  transition: transform 0.5 ease;
+  transition: transform 0.5s ease;
 }
 
 .is-active .btn-icon {
