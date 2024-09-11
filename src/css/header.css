@@ -53,9 +53,9 @@
   transition: opacity 250ms;
   position: absolute;
   flex-direction: column;
-  background-image: image-set(
+  background-image:
     url(/img/hero/hero-mob-menu.png)
-  );
+  ;
   background-size: cover;
   width: 100vw;
   height: 100vh;
