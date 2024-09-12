@@ -71,6 +71,7 @@
 
 @media screen and (min-width: 320px) and (max-width: 375px) and (min-resolution: 192dpi) {
   .covers-section {
+    max-width: 375px;
     background-image: url('../img/covers/back-mob@1x.png');
   }
 }
