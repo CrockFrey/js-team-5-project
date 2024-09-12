@@ -5,4 +5,5 @@ new Accordion('.accordion', {elementClass: 'content-box',
     triggerClass: 'accordion-button',
     panelClass: 'content',
     duration: '400',
+    showMultiple: true,
 })
