@@ -23,7 +23,8 @@ const projectsSwiper = new Swiper('.projects-list', {
 
     autoplay: {
     delay: 3000,
-    disableOnInteraction: true
+    disableOnInteraction: true,
+    pauseOnMouseEnter: true,
   },
     
   breakpoints: {
