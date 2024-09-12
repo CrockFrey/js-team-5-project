@@ -48,21 +48,22 @@
 
 .animation {
   animation-name: marqueeLine;
-  animation-duration: 6s;
+  animation-duration: 10s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 
 @keyframes marqueeLine {
-  from {
-    transform: translateX(-20%);
+  0% {
+    transform: translateX(-30%);
   }
-  to {
+  50% {
     transform: translateX(-180%);
   }
+  100% {
+    transform: translateX(45%);
+  }
 }
-
-
 
 /* ---------- TABLET ---------- */
 
