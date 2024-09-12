@@ -991,19 +991,23 @@
           type="email"
           placeholder="clients@gmail.com"
         />
-        <span class="message success" id="successMessage">Success!</span>
-        <span class="message error" id="errorMessage"
-          >Invalid email, try again</span
-        >
+        <p class="message success" id="successMessage">Success!</p>
+        <p class="message error" id="errorMessage">Invalid email, try again</p>
       </div>
 
-      <input
-        class="input-form-text no-scroll"
-        id="comments"
-        name="footer comments"
-        type="text"
-        placeholder="comments"
-      />
+      <div class="input-form">
+        <input
+          class="input-form-text no-scroll"
+          id="comments"
+          name="footer comments"
+          type="text"
+          placeholder="comments"
+        />
+        <p class="message success" id="successMessageComments">Success!</p>
+        <p class="message error" id="errorMessageComments">
+          Please, fill the field
+        </p>
+      </div>
 
       <button class="send-btn-footer" type="submit">Send</button>
     </form>
