@@ -1,6 +1,6 @@
 .covers-section {
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 1440px;
   min-height: 508px;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -64,9 +64,12 @@
   to {
     transform: translateX(-180%);
   }
+  to {
+    transform: translateX(-100%);
+  }
 }
 
-@media (min-resolution: 192dpi) {
+@media screen and (min-width: 320px) and (max-width: 375px) and (min-resolution: 192dpi) {
   .covers-section {
     background-image: url('../img/covers/back-mob@1x.png');
   }
@@ -101,9 +104,5 @@
 
   .covers-item {
     margin-bottom: 40px;
-  }
-
-  .covers-img {
-    width: calc(100% / 9);
   }
 }
