@@ -8,19 +8,13 @@ const refs = {
   emailElem: document.getElementById('email'),
   successMessage: document.getElementById('successMessage'),
   errorMessage: document.getElementById('errorMessage'),
+  successMessageComments: document.getElementById('successMessageComments'),
+  errorMessageComments: document.getElementById('errorMessageComments'),
   formElem: document.querySelector('.form-footer'),
   footerElem: document.getElementById('work-together'),
 };
 
 const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-refs.commentsElem.addEventListener('blur', function () {
-  const maxLength = 35;
-  const textComment = refs.commentsElem.value;
-  if (textComment.length > maxLength) {
-    refs.commentsElem.value = textComment.substring(0, maxLength) + '...';
-  }
-});
 
 refs.emailElem.addEventListener('input', function () {
   const email = refs.emailElem.value.trim();
@@ -34,6 +28,21 @@ refs.emailElem.addEventListener('input', function () {
     refs.emailElem.classList.remove('success');
     refs.successMessage.style.display = 'none';
     refs.errorMessage.style.display = 'block';
+  }
+});
+
+refs.commentsElem.addEventListener('input', function () {
+  const textComment = refs.commentsElem.value.trim();
+  if (textComment.length > 0) {
+    refs.commentsElem.classList.add('success');
+    refs.commentsElem.classList.remove('error');
+    refs.successMessageComments.style.display = 'block';
+    refs.errorMessageComments.style.display = 'none';
+  } else {
+    refs.commentsElem.classList.add('error');
+    refs.commentsElem.classList.remove('success');
+    refs.successMessageComments.style.display = 'none';
+    refs.errorMessageComments.style.display = 'block';
   }
 });
 
