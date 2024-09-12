@@ -2,6 +2,8 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import { Navigation, Autoplay } from 'swiper/modules';
 
+  const prevButton = document.querySelector('.projects-button-prev');
+  const nextButton = document.querySelector('.projects-button-next');
 
 const projectsSwiper = new Swiper('.projects-list', {
   modules: [Navigation, Autoplay],
@@ -21,8 +23,7 @@ const projectsSwiper = new Swiper('.projects-list', {
 
     autoplay: {
     delay: 3000,
-    disableOnInteraction: true,
-    pauseOnMouseEnter: true,
+    disableOnInteraction: true
   },
     
   breakpoints: {
@@ -40,9 +41,6 @@ const projectsSwiper = new Swiper('.projects-list', {
 });
 
 projectsSwiper.on('slideChange', () => {
-  const prevButton = document.querySelector('.projects-button-prev');
-  const nextButton = document.querySelector('.projects-button-next');
-
   if (projectsSwiper.isBeginning) {
     prevButton.classList.add('swiper-button-disabled');
     prevButton.setAttribute('disabled', true);
@@ -67,8 +65,6 @@ document.addEventListener('keydown', e => {
     projectsSwiper.slidePrev();
   } else if (e.key === 'Tab') {
     const focusedElement = document.activeElement;
-    const prevButton = document.querySelector('.projects-button-prev');
-    const nextButton = document.querySelector('.projects-button-next');
 
     if (focusedElement === prevButton) {
       e.preventDefault();
