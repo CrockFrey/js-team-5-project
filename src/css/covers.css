@@ -1,6 +1,6 @@
 .covers-section {
   margin: 0 auto;
-  max-width: 1440px;
+  max-width: 100%;
   min-height: 508px;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -18,7 +18,6 @@
 }
 .covers-content {
   position: relative;
-
   display: flex;
   animation: marquee 30s linear infinite;
   will-change: transform;
@@ -28,15 +27,14 @@
 .covers-menu {
   position: absolute;
   right: -2000px;
-  left: -920px;
+  left: -600px;
   overflow: hidden;
 }
 .covers-item {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   margin-bottom: 40px;
   transform: rotate(16deg);
-
   display: flex;
 }
 .covers-img {
@@ -60,16 +58,12 @@
   from {
     transform: translateX(-20%);
   }
-
   to {
     transform: translateX(-180%);
   }
-  to {
-    transform: translateX(-100%);
-  }
 }
 
-@media screen and (min-width: 320px) and (max-width: 375px) and (min-resolution: 192dpi) {
+@media screen and (min-width: 320px) and (max-width: 375px) {
   .covers-section {
     max-width: 375px;
     background-image: url('../img/covers/back-mob@1x.png');
@@ -78,7 +72,7 @@
 
 /* ---------- TABLET ---------- */
 
-@media screen and (min-width: 768px) and (min-resolution: 192dpi) {
+@media screen and (min-width: 768px) {
   .covers-section {
     max-width: 768px;
     min-height: 960px;
@@ -89,21 +83,17 @@
   }
   .covers-item {
     display: flex;
-    gap: 35px;
-    margin-bottom: 45px;
+    gap: 40px;
+    margin-bottom: 60px;
   }
 }
 
 /* ---------- DESKTOP ---------- */
 
-@media screen and (min-width: 1440px) and (min-resolution: 192dpi) {
+@media screen and (min-width: 1440px) {
   .covers-section {
     max-width: 1440px;
 
     background-image: url('../img/covers/back-desk@1x.png');
-  }
-
-  .covers-item {
-    margin-bottom: 40px;
   }
 }
