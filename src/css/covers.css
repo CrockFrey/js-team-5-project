@@ -1,11 +1,10 @@
 .covers-section {
   margin: 0 auto;
-  max-width: 100%;
+  max-width: 375px;
   min-height: 508px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-image: url('../img/covers/back-mob@1x.png');
 }
 
@@ -63,12 +62,7 @@
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 375px) {
-  .covers-section {
-    max-width: 375px;
-    background-image: url('../img/covers/back-mob@1x.png');
-  }
-}
+
 
 /* ---------- TABLET ---------- */
 
